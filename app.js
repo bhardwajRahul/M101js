@@ -1,16 +1,18 @@
 /**
  * Created by rahul on 10/6/17.
  */
-var http = require('http');
 var express = require('express'),
-    consolidate = require('consolidate'),
-    mongodb = require('mongodb');
+    app =express();
 
-var server = http.createServer(function(request, response) {
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("My first Node server");
+app.get('/', function(req,res){
+    res.send('Hello World');
 });
 
-server.listen(8000);
+app.use(function(req,res){
+    res,sendStatus(404);
+});
 
-console.log("Server is up and running at http://127.0.0.1:8000/");
+var server = app.listen(8000, function(){
+    var port = server.address().port;
+    console.log('Express server is up and running at %s',port);
+});
