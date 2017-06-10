@@ -1,0 +1,12 @@
+{
+  "name" : "wifimessenger",
+  "version" : "1.0.0",
+  "description":"My first node server",
+  "main" : "app.js",
+  "dependencies":{
+    "consolidate": "~0.13.1",
+    "express": "~4.13.3",
+    "mongodb": "~2.1.3"
+  },
+  "author":"Rahul Bhardwaj"
+}
