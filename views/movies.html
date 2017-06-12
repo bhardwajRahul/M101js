@@ -1,0 +1,14 @@
+<head>
+    <style>
+        body {font-family: 'Tohma','Ariel',sans-serif; }
+    </style>
+</head>
+
+<h3>Movies</h3>
+<ul>
+    {% for movie in movies %}
+    <li><a href="http://www.imdb.com/title/{{ movie.imdb }}"> {{movie.title}}, {{movie.year}}</a> </li>
+    {% else %}
+    <li> No movie Found</li>
+    {% endfor %}
+</ul>

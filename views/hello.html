@@ -1,0 +1,7 @@
+<ul>
+    {% for name in names %}
+    <li><h1>Hello, {{name.name}} !</h1></li>
+    {% else %}
+    <li>No record found</li>
+    {% endfor %}
+</ul>
